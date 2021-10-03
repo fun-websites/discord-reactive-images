@@ -8,6 +8,8 @@ export interface Config {
   bounce?: boolean
   gapPercentage?: number
   includeSelf?: boolean
+  noDimSelf?: boolean
+  noDimOthers?: boolean
 }
 
 export interface Member {

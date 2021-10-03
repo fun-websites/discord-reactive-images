@@ -139,6 +139,8 @@
                     v-model="config.includeSelf"
                     hide-details
                   ></v-checkbox>
+                  <v-checkbox class="no-dim-self" label="Do not dim own inactive image" v-model="config.noDimSelf" hide-details></v-checkbox>
+                  <v-checkbox class="no-dim-others" label="Do not dim others' inactive images" v-model="config.noDimOthers" hide-details></v-checkbox>
 
                   <v-slider
                     class="mt-4 image-spacing"
@@ -446,6 +448,8 @@ export default defineComponent({
             includeSelf: config.value.includeSelf,
             bounce: config.value.bounce,
             gapPercentage: config.value.gapPercentage,
+            noDimSelf: config.value.noDimSelf,
+            noDimOthers: config.value.noDimOthers,
           })
 
           data.configError = null

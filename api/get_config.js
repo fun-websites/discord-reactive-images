@@ -8,5 +8,7 @@ export default async function(ctx) {
     includeSelf: !!config.include_self || false,
     bounce: !!config.bounce || false,
     gapPercentage: +config.gap_percentage || 0,
+    noDimSelf: !!config.no_dim_self || false,
+    noDimOthers: !!config.no_dim_others || false,
   }
 }

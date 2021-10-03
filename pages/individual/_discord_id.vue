@@ -3,7 +3,7 @@
     <v-overlay :value="error">
       <v-alert type="error" outlined>{{ error }}</v-alert>
     </v-overlay>
-    <div class="grid" :class="{ bounce: config.bounce, speaking: member.speaking }">
+    <div class="grid" :class="{ bounce: config.bounce, speaking: member.speaking, dim: !config.noDimSelf }">
       <div class="member inactive" :style="{backgroundImage: inactiveImg}"></div>
       <div class="member speaking" :style="{backgroundImage: speakingImg}"></div>
     </div>
@@ -62,10 +62,12 @@ body {
 }
 
 .member.inactive {
-  filter: brightness(50%);
   opacity: 1;
   z-index: 2;
   transition: opacity 300ms cubic-bezier(0,0,.5,1);
+}
+.dim .member.inactive {
+  filter: brightness(50%);
 }
 .speaking .member.inactive {
   opacity: 0;

@@ -8,7 +8,7 @@
         v-for="m in visibleMembers"
         :key="m.id"
         class="member"
-        :class="{ speaking: m.speaking }"
+        :class="{ speaking: m.speaking, dim: m.dim }"
         :style="memberStyle"
       >
         <div class="inactive">
@@ -33,7 +33,12 @@ export default defineComponent({
     const { members, config, error } = useDiscordRPC()
 
     const visibleMembers = computed(() => {
-      return members.value.filter((m) => config.value.includeSelf || m.id !== config.value.id)
+      return members.value.filter((m) => config.value.includeSelf || m.id !== config.value.id).map(m => {
+        return {
+          ...m,
+          dim: m.id === config.value.id ? !config.value.noDimSelf : !config.value.noDimOthers,
+        }
+      })
     })
 
     const gridStyle = computed(() => {
@@ -98,10 +103,12 @@ body {
 }
 
 .member .inactive {
-  filter: brightness(50%);
   opacity: 1;
   z-index: 2;
   transition: opacity 300ms cubic-bezier(0,0,.5,1);
+}
+.member.dim .inactive {
+  filter: brightness(50%);
 }
 .member.speaking .inactive {
   opacity: 0;
