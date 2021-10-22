@@ -8,6 +8,10 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
+"engines": {
+		"node": ">=15.0.0"
+	},
+
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1.0",
     "@nuxt/typescript-runtime": "^2.0.0",
