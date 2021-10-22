@@ -1,8 +1,8 @@
 import crypto from 'crypto'
 import mysql from 'mysql2/promise'
 import { secretbox, randomBytes } from 'tweetnacl'
-import SignJWT from 'jose/dist/node/cjs/jwt/sign'
-import VerifyJWT from 'jose/dist/node/cjs/jwt/verify'
+import SignJWT from '../node_modules/jose/dist/node/cjs/jwt/sign'
+import VerifyJWT from 'jose'
 
 export const database = mysql.createPool(`mysql://${process.env.MYSQL}/discord-reactive-images?charset=utf8mb4&timezone=Z`)
 
