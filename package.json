@@ -21,7 +21,7 @@
     "core-js": "^3.8.2",
     "imagemin": "^7.0.1",
     "imagemin-pngquant": "^9.0.1",
-    "jose": "^3.5.0",
+    "jose": "^4.1.1",
     "vue-template-compiler": "^2.6.10",
     "vue": "^2.6.4",
     "eslint": "^7.4.0",
