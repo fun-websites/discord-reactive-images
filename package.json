@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt build",
-    "start": "NUXT_PORT=process.env.PORT nuxt start",
+    "start": "NUXT_PORT=3000 nuxt start",
     "generate": "nuxt generate"
   },
 "engines": {
