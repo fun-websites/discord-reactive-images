@@ -8,24 +8,23 @@
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
-"engines": {
-		"node": "15.0.0"
-	},
-
+  "engines": {
+    "node": "15.0.0"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@nuxtjs/composition-api": "^0.20.1",
     "@nuxtjs/redirect-module": "^0.3.1",
+    "@nuxtjs/vuetify": "^1.11.2",
     "cookie-parser": "^1.4.5",
     "core-js": "^3.8.2",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.4.0",
+    "express": "^4.17.1",
     "imagemin": "^7.0.1",
     "imagemin-pngquant": "^9.0.1",
-    "jose": "^4.1.1",
-    "vue-template-compiler": "^2.6.10",
-    "vue": "^2.6.4",
-    "express": "^4.17.1",
-    "eslint": "^7.4.0",
+    "jose": "^3.5.0",
     "jwt-decode": "^3.1.2",
     "lodash": "^4.17.20",
     "luxon": "^1.25.0",
@@ -33,9 +32,10 @@
     "nuxt": "^2.14.12",
     "sharp": "^0.27.0",
     "tweetnacl": "^1.0.3",
-    "webpack": "^4.46.0",
     "ulid": "^2.3.0",
-    "@nuxtjs/vuetify": "^1.11.2",
+    "vue": "^2.6.4",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.46.0",
     "ws": "^7.4.2"
   },
   "devDependencies": {
