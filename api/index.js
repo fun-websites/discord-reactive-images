@@ -4,7 +4,7 @@ import { secretbox, randomBytes } from 'tweetnacl'
 import SignJWT from 'jose'
 import jwtVerify from 'jose'
 
-export const database = mysql.createPool(`mysql://${process.env.MYSQL}/discord-reactive-images?charset=utf8mb4&timezone=Z`)
+export const database = mysql.createPool(`mysql://${process.env.MYSQL}/aQHh2Q7PYx?charset=utf8mb4&timezone=Z`)
 
 export async function query(statement, values) {
   const [results, fields] = await database.execute(statement, values)
@@ -13,7 +13,7 @@ export async function query(statement, values) {
 
 
 export const callbackDomain =
-  process.env.NODE_ENV === 'production' ? 'https://zakazakaa.herokuapp.com/' : 'http://localhost:3000'
+  process.env.NODE_ENV === 'production' ? 'https://zakazakaa.herokuapp.com' : 'http://localhost:3000'
 
 export const discordScopes = 'rpc identify'
 
