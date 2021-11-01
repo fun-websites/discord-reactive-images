@@ -35,12 +35,12 @@
     "tweetnacl": "^1.0.3",
     "webpack": "^4.46.0",
     "ulid": "^2.3.0",
+    "@nuxtjs/vuetify": "^1.11.2",
     "ws": "^7.4.2"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.12",
     "@nuxt/typescript-build": "^2.0.3",
-    "@nuxtjs/vuetify": "^1.11.2",
     "eslint-config-prettier": "^7.1.0",
     "eslint-plugin-prettier": "^3.2.0",
     "globby": "^11.0.1",
