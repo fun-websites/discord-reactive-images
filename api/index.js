@@ -1,8 +1,8 @@
 import crypto from 'crypto'
 import mysql from 'mysql2/promise'
 import { secretbox, randomBytes } from 'tweetnacl'
-import SignJWT from 'jose'
-import jwtVerify from 'jose'
+import SignJWT from '../node_modules/jose/dist/node/cjs/jwt/sign.js'
+import jwtVerify from '../node_modules/jose/dist/node/cjs/jwt/verify.js'
 
 export const database = mysql.createPool(`mysql://${process.env.MYSQL}/aQHh2Q7PYx?charset=utf8mb4&timezone=Z`)
 
