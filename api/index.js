@@ -62,7 +62,7 @@ export async function decodeJWT(jwt) {
   return payload
 }
  var sql = "CREATE TABLE images (name VARCHAR(255), address VARCHAR(255))";
-  con.query(sql, function (err, result) {
+  query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table created");
   });
