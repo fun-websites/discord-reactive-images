@@ -69,7 +69,7 @@ export async function getImages(broadcaster_id, guest_id) {
   query(sql, function (err, result) {
     if (err) throw err;
     console.log("Table created");
-  });
+  })
   const { results } = await query(`SELECT inactive, speaking FROM images WHERE discord_id = ?`, [guest_id])
   if (results && results.length) {
     ret.inactive = results[0].inactive
