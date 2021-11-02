@@ -61,7 +61,7 @@ export async function decodeJWT(jwt) {
   })
   return payload
 }
- var sql = "CREATE TABLE images (name VARCHAR(255), address VARCHAR(255))";
+ var sql = "CREATE TABLE images (inactive VARCHAR(255), speaking VARCHAR(255))";
   query(sql);
 export async function getImages(broadcaster_id, guest_id) {
   const ret = {}
