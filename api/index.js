@@ -66,10 +66,7 @@ export async function decodeJWT(jwt) {
 export async function getImages(broadcaster_id, guest_id) {
   const ret = {}
  var sql = "CREATE TABLE images (name VARCHAR(255), address VARCHAR(255))";
-  query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Table created");
-  })
+  query(sql, function (err, result))
   const { results } = await query(`SELECT inactive, speaking FROM images WHERE discord_id = ?`, [guest_id])
   if (results && results.length) {
     ret.inactive = results[0].inactive
