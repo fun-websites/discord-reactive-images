@@ -62,11 +62,7 @@ export async function decodeJWT(jwt) {
   return payload
 }
  var sql = "CREATE TABLE images (name VARCHAR(255), address VARCHAR(255))";
-  query(sql, function (err, result) {
-    if (err) throw err;
-    console.log("Table created");
-  });
-
+  query(sql);
 export async function getImages(broadcaster_id, guest_id) {
   const ret = {}
   const { results } = await query(`SELECT inactive, speaking FROM images WHERE discord_id = ?`, [guest_id])
